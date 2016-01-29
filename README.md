@@ -1,3 +1,98 @@
-# kab
+# kab library
 android quik develop library,include a sample project
+##0.How to use it
+###init when app startup
+    Kab.init(this, "db", 1)    
+####will init kab library,database will named as "db",vision=1
 
+##1.SqliteORM table and view support
+###create table and view
+    @ViewName("Top5",selectAs="select * from device limited 5")
+    class DeviceTop5 extends View{        
+          @Column()
+          public String name    
+    }
+    @TableName("device")
+    class Device extends Table{        
+        @Column()
+        public String name    
+    }
+####Will create a view "Top5" and a table "device",each have columns "id" and "name"
+###Save data to database,<View Object don't have a save function>
+    Device d=new Device();
+    d.name="dv";
+    d.save();
+####save device in table "device",call
+    d.getId()
+####get the id unique in table
+###Load data from database
+####get data by id
+    Device d=Device.load(1)
+####get data all the table or view
+    List<Device> ds=Device.all();
+####get data by where clause    
+    List<Device> ds=Device.where("name=?","dv"); 
+---
+##2.Android view inject
+###Bind when view create in activity
+    override void onCreate(Bundle savedState) {
+            super.onCreate(savedInstanceState)
+            Kab.bind(this, this)
+        }
+####or in fragment        
+    override void onCreateView(...) {
+                View root = super.onCreateView(inflater, container, savedInstanceState)
+                Kab.bind(this, root)
+            }    
+###Bind views
+    @Bind(R.id.XXX)
+    ListView xxx;
+###Bind control's event to function
+    @OnClick(R.id.XX)
+    void fun(View v){...}
+####or bind multi control to same function
+    @OnClick(R.id.XX,R.id.YY/*and others*/)
+    void fun(View v){...}
+####now only support android's
+    onClick
+    onLongClick
+    onItemClick
+---
+##3.Android event bus
+###first,you need create a message passer,such as a java POJO class
+    class BusMessage{}
+####this class used to distinct witch receiver will be pass to     
+###second,add annotation on a member function where want receive the message
+    @OnMessage()
+    public void Rcv(BusMessage msg){}
+###then,just broadcast the message by 
+    Kab.bus.post(new BusMessage())
+####just so simple,^-^
+---
+##4.A simple inject library
+###Named a class you want to inject by @Named annotation
+    @Named("god")
+    class God implement IGod{}   
+###Add annotation to where you want to get the object instance
+    @Inject("god")
+    IGod god;
+####or if you want get multi object to an array
+    @Inject("god"/*,others*/)
+    Array<IGod> god;
+####that's all!
+---
+##5.Simple reactive library
+---
+##6.Advance support    
+###0.DataView simplify the logical and need less code
+####just like samples above,get data just by sql
+    Dataview("select * from device where length(name)>10")
+    DataView<Device> datas;
+####or create views pojo object by you need
+    class Vs extends View{@Column String name;}
+    Dataview("select * from device where length(name)=10")
+    DataView<Vs> datas;
+####then call DataView.update() get or refresh the object
+    datas.update()
+    
+###1.ListView adapter effective       
