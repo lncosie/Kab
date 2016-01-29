@@ -1,7 +1,7 @@
-# kab library
+#kab library
 android quik develop library,include a sample project
 ##Use it in project
-######download kar.aar<https://github.com/lncosie/Kab/blob/master/kab.aar> to project libs dir
+######download kar.aar [https://github.com/lncosie/Kab/raw/master/kab.aar] to project libs dir
 ######add in build.gradle
     dependencies {
         compile(name:'kab', ext:'aar')
