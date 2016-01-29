@@ -100,4 +100,22 @@ android quik develop library,include a sample project
 ####then call DataView.update() get or refresh the object
     datas.update()
     
-###ListView adapter effective       
+###ListView adapter effective 
+####Create a holder class
+    class Holder : com.lncosie.kab.widget.ListViewAdapter.ViewHolder<Device> {    
+          @Bind(R.id.user_name)
+          lateinit var user_name: TextView
+    
+          override int viewId(position: Int, data: Device){
+            return R.layout.item_device;
+           }
+          override void bind(data: Device) {
+              user_name.text = data.name
+          }
+      }
+####and use it like this   
+   @Dataview("select * from device")
+   DataView<Device> devices;
+   
+   ListAdapter adapter = new ListViewAdapter(this, devices, Holder::class.java);
+   list.adapter = adapter
