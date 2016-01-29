@@ -86,11 +86,11 @@ android quik develop library,include a sample project
 ##Advance support    
 ###DataView simplify the logical and need less code
 ####just like samples above,get data just by sql
-    Dataview("select * from device where length(name)>10")
+    @Dataview("select * from device where length(name)>10")
     DataView<Device> datas;
 ####or create views pojo object by you need
     class Vs extends View{@Column String name;}
-    Dataview("select * from device where length(name)=10")
+    @Dataview("select * from device where length(name)=10")
     DataView<Vs> datas;
 ####then call DataView.update() get or refresh the object
     datas.update()
