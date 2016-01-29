@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/HLayoutFillPadding"
+    >
+    <ImageView
+        android:src="@drawable/device"
+        style="@style/Icon32Layout"
+        />
+
+    <TextView
+        android:id="@+id/user_name"
+        android:text="@string/stub"
+        android:textColor="@color/black"
+        style="@style/HWeightLefterLayoutPadding"
+        />
+
+    <ImageView
+        android:src="@drawable/attention"
+        style="@style/Icon32Layout" />
+</LinearLayout>

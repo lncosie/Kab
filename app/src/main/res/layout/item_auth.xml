@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/HLayoutFillPadding">
+    <de.hdodenhof.circleimageview.CircleImageView
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/user_image"
+        android:src="@drawable/e"
+        style="@style/Icon32Layout"
+        />
+    <TextView
+        android:id="@+id/user_name"
+        android:text="@string/stub"
+        style="@style/LeftCenterWeigh2Text"
+        />
+    <ImageView
+        android:src="@drawable/attention"
+        style="@style/Icon32Layout" />
+</LinearLayout>

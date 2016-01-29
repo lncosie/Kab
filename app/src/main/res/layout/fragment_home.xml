@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    style="@style/V_FrameFull"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    >
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:layout_margin="@dimen/dp16"
+        android:src="@drawable/e"
+        android:layout_width="match_parent"
+        android:layout_height="180dp" />
+    <TextView
+        android:text="@string/stub"
+        android:textColor="@color/white"
+        style="@style/CHFillV48dp" />
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/list_history"
+        style="@style/HVFill"/>
+</LinearLayout>

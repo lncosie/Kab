@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/HVFill"
+    android:background="@drawable/b"
+    android:orientation="vertical">
+
+    <include layout="@layout/title_bar"></include>
+    <LinearLayout style="@style/H_LayoutV48dpMargin"
+        android:background="@color/setting_item"
+        >
+        <TextView
+            style="@style/LeftCenterWeigh2Text"
+            android:text="@string/notify_switch" />
+        <Switch style="@style/H_LayoutWeightChild" />
+    </LinearLayout>
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/user_image"
+        android:layout_margin="@dimen/dp8"
+        android:src="@drawable/e"
+        android:layout_width="match_parent"
+        android:layout_height="140dp" />
+    <TextView
+        android:text="@string/stub"
+        android:textColor="@color/white"
+        style="@style/V_LayoutV48dp" />
+    <ListView
+        android:id="@+id/auth_ids"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="visible"></ListView>
+</LinearLayout>

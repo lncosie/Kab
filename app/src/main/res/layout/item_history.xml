@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:gravity="center_vertical"
+    >
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="@dimen/dp8"
+        android:layout_height="@dimen/dp56"
+        android:layout_marginLeft="@dimen/dp16"
+        >
+        <View
+            android:layout_gravity="center_horizontal"
+            android:layout_width="@dimen/dp1"
+            android:layout_height="@dimen/dp24"
+            android:background="@color/setting_item"
+            />
+        <ImageView
+            android:layout_width="@dimen/dp8"
+            android:layout_height="@dimen/dp8"
+            android:background="@drawable/shape_radio" />
+        <View
+            android:layout_gravity="center_horizontal"
+            android:layout_width="@dimen/dp1"
+            android:layout_height="@dimen/dp24"
+            android:background="@color/setting_item"
+            />
+    </LinearLayout>
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:layout_marginLeft="@dimen/dp16"
+        android:id="@+id/open_user_img"
+        android:src="@drawable/d"
+        style="@style/Icon32Layout"
+        />
+    <LinearLayout
+        android:orientation="vertical"
+        style="@style/H_LayoutWeightChild"
+        >
+        <TextView
+            android:layout_marginTop="@dimen/dp4"
+            android:id="@+id/user_name"
+            android:text="@string/stub"
+            style="@style/MasterText"
+            />
+        <TextView
+            android:id="@+id/open_time"
+            android:text="@string/stub"
+            style="@style/DetailText"
+            />
+    </LinearLayout>
+
+</LinearLayout>

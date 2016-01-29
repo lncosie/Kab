@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/HVFill">
+    <LinearLayout
+        style="@style/HLayoutFillLayoutV48dp">
+        <RadioGroup
+            style="@style/HLayoutFillLayoutV48dp">
+            <Space
+                android:layout_weight="1"
+                style="@style/H_LayoutWeightChild"
+                ></Space>
+            <RadioButton
+                android:id="@+id/door_button"
+                android:text="@string/history"
+                android:tag="0"
+                android:button="@drawable/history_door_indicator"
+                style="@style/HistoryIndecator"
+                />
+            <Space
+                android:layout_weight="1"
+                style="@style/H_LayoutWeightChild"
+                ></Space>
+            <View
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_marginTop="@dimen/dp2"
+                android:layout_marginBottom="@dimen/dp2"
+                android:layout_width="1dp"
+                android:layout_weight="0"
+                android:layout_height="match_parent"
+                android:background="@color/setting_item"
+                >
+            </View>
+            <Space
+                android:layout_weight="1"
+                style="@style/H_LayoutWeightChild"
+                ></Space>
+            <RadioButton
+                android:id="@+id/alarm_button"
+                android:text="@string/alarm"
+                android:tag="1"
+                android:button="@drawable/history_alter_indicator"
+                style="@style/HistoryIndecator" />
+            <Space
+                android:layout_weight="1"
+                style="@style/H_LayoutWeightChild"
+                ></Space>
+        </RadioGroup>
+    </LinearLayout>
+
+    <include layout="@layout/v_line"></include>
+    <LinearLayout
+        android:id="@+id/open_logs_sorter"
+        style="@style/HLayoutFillLayoutV48dp">
+        <RadioGroup
+            style="@style/HLayoutFillLayoutV48dp">
+            <RadioButton
+                android:text="@string/data"
+                android:tag="0"
+                android:drawableRight="@drawable/drop"
+                android:paddingRight="@dimen/dp8"
+                style="@style/HistoryIndecator" />
+            <View
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_marginTop="@dimen/dp2"
+                android:layout_marginBottom="@dimen/dp2"
+                android:layout_width="1dp"
+                android:layout_weight="0"
+                android:layout_height="match_parent"
+                android:background="@color/setting_item"
+                >
+            </View>
+            <RadioButton
+                android:text="@string/open_type"
+                android:tag="1"
+                android:drawableRight="@drawable/drop"
+                android:paddingRight="@dimen/dp8"
+                style="@style/HistoryIndecator" />
+            <View
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_marginTop="@dimen/dp2"
+                android:layout_marginBottom="@dimen/dp2"
+                android:layout_width="1dp"
+                android:layout_weight="0"
+                android:layout_height="match_parent"
+                android:background="@color/setting_item"
+                >
+            </View>
+            <RadioButton
+                android:text="@string/users"
+                android:tag="2"
+                android:drawableRight="@drawable/drop"
+                android:paddingRight="@dimen/dp8"
+                style="@style/HistoryIndecator" />
+        </RadioGroup>
+
+    </LinearLayout>
+    <include layout="@layout/v_line"></include>
+    <ListView
+        android:id="@+id/list_history"
+        style="@style/V_LayoutWeightChild"/>
+</LinearLayout>

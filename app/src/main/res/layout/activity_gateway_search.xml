@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    android:background="@color/lighter_gray"
+    >
+    <include layout="@layout/title_bar"></include>
+    <include layout="@layout/v_fragment"/>
+    <LinearLayout
+        style="@style/HLayoutFillLayoutV48dp">
+        <TextView
+            android:text="@string/ssid"
+            android:layout_weight="4"
+            android:background="@color/white"
+            style="@style/HWeightCenterLayout"/>
+        <include layout="@layout/h_line"></include>
+        <EditText
+            android:id="@+id/password"
+            android:background="@color/white"
+            style="@style/HWeightLefterLayout">
+            <requestFocus/>
+        </EditText>
+    </LinearLayout>
+    <include layout="@layout/v_fragment"/>
+    <LinearLayout
+        style="@style/HLayoutFillLayoutV48dp">
+        <TextView
+            android:text="@string/password"
+            android:layout_weight="4"
+            android:background="@color/white"
+            style="@style/HWeightCenterLayout"/>
+        <include layout="@layout/h_line"></include>
+        <EditText
+            android:background="@color/white"
+            android:id="@+id/password_re"
+            style="@style/HWeightLefterLayout" />
+    </LinearLayout>
+
+</LinearLayout>

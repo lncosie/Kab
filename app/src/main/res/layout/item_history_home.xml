@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="80dp"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:paddingBottom="15dp"
+    android:paddingTop="15dp">
+    <TextView
+        android:id="@+id/user_name"
+        style="@style/V_LayoutWeightChild"
+        android:gravity="center|bottom"
+        android:text="R.string.stub"
+        />
+
+    <LinearLayout
+        style="@style/V_LayoutWeightChild">
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="@dimen/dp1"
+            android:layout_gravity="center"
+            android:layout_weight="4"
+            android:background="@color/orenge"></View>
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/user_image"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_gravity="center"
+            android:src="@drawable/d" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="@dimen/dp1"
+            android:layout_gravity="center"
+            android:layout_weight="4"
+            android:background="@color/orenge"></View>
+    </LinearLayout>
+
+    <LinearLayout
+        style="@style/V_LayoutWeightChild">
+        <TextView
+            android:id="@+id/open_date"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center|top"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/open_time"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center|top"
+            android:textSize="12sp" />
+    </LinearLayout>
+</LinearLayout>

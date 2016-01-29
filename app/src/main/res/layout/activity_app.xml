@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:background="@drawable/b"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    >
+    <include layout="@layout/title_bar"></include>
+    <android.support.v4.view.ViewPager
+        android:id="@+id/fragment_pager"
+        style="@style/V_LayoutWeightChild">
+    </android.support.v4.view.ViewPager>
+    <include layout="@layout/v_line"></include>
+    <LinearLayout
+        style="@style/CHFillV48dp">
+        <RadioGroup
+            style="@style/CHFillV48dp">
+            <RadioButton
+                android:id="@+id/home_button"
+                android:text="@string/home"
+                android:tag="0"
+                android:onClick="pageActive"
+                android:drawableTop="@drawable/home"
+                style="@style/PageIndecator" />
+            <RadioButton
+                android:text="@string/users"
+                android:tag="1"
+                android:onClick="pageActive"
+                android:drawableTop="@drawable/users"
+                style="@style/PageIndecator" />
+            <RadioButton
+                android:text="@string/history"
+                android:tag="2"
+                android:onClick="pageActive"
+                android:drawableTop="@drawable/lock"
+                style="@style/PageIndecator" />
+            <RadioButton
+                android:text="@string/setting"
+                android:tag="3"
+                android:onClick="pageActive"
+                android:drawableTop="@drawable/setting"
+                style="@style/PageIndecator" />
+        </RadioGroup>
+
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="LHLayout" parent="">
+        <item name="android:gravity">center_vertical|left</item>
+        <item name="android:orientation">horizontal</item>
+    </style>
+
+    <style name="LHNoneV48dp" parent="LHLayout">
+        <item name="android:layout_height">@dimen/dp48</item>
+    </style>
+    <style name="LHNoneV48dpPadding" parent="LHNoneV48dp">
+        <item name="android:paddingLeft">@dimen/padding</item>
+        <item name="android:paddingRight">@dimen/padding</item>
+    </style>
+
+    <style name="LHFillV48dp" parent="LHNoneV48dp">
+        <item name="android:layout_width">match_parent</item>
+    </style>
+    <style name="LHFillV48dpPadding" parent="LHNoneV48dpPadding">
+        <item name="android:layout_width">match_parent</item>
+    </style>
+    <style name="LH5V48dp" parent="LHNoneV48dp">
+        <item name="android:layout_width">@dimen/dp0</item>
+        <item name="android:layout_weight">5</item>
+    </style>
+    <style name="LH5V48dpPadding" parent="LHNoneV48dpPadding">
+        <item name="android:layout_width">@dimen/dp0</item>
+        <item name="android:layout_weight">5</item>
+    </style>
+</resources>

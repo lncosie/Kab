@@ -1,0 +1,37 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white"
+    >
+    <include layout="@layout/title_bar"></include>
+
+    <EditText
+        android:id="@+id/enter_text"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp48"
+        android:hint="@string/stub"
+        android:textSize="@dimen/sp14"
+        style="@style/InputPassword" />
+    <LinearLayout
+        android:orientation="horizontal"
+        style="@style/HLayoutFillPadding"
+        android:gravity="right|center_vertical"
+        android:layout_marginBottom="@dimen/dp16"
+        >
+        <TextView
+            android:id="@+id/cancel"
+            android:text="@string/cancel"
+            android:layout_marginRight="@dimen/dp16"
+            android:background="@drawable/menu_item"
+            style="@style/Icon48Layout"
+            />
+        <TextView
+            android:gravity="center"
+            android:id="@+id/ok"
+            android:text="@string/ok"
+            android:background="@drawable/menu_item"
+            style="@style/Icon48Layout"
+            android:layout_marginRight="@dimen/dp16"/>
+    </LinearLayout>
+</LinearLayout>

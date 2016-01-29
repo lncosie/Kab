@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="margin8dp">8dp</dimen>
+    <dimen name="margin16dp">16dp</dimen>
+    <dimen name="height48dp">48dp</dimen>
+
+    <style name="HVFill" parent="">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_weight">10</item>
+        <item name="android:orientation">vertical</item>
+    </style>
+    <style name="HVFillMargin" parent="HVFill">
+        <item name="android:paddingLeft">@dimen/margin16dp</item>
+        <item name="android:paddingRight">@dimen/margin16dp</item>
+    </style>
+
+    <style name="HLayout48dp" parent="">
+        <item name="android:gravity">center</item>
+        <item name="android:orientation">horizontal</item>
+        <item name="android:layout_height">@dimen/height48dp</item>
+    </style>
+    <style name="HLayoutFillLayoutV48dp" parent="HLayout48dp">
+        <item name="android:layout_width">match_parent</item>
+    </style>
+
+    <style name="HLayoutFillPadding" parent="HLayoutFillLayoutV48dp">
+        <item name="android:paddingLeft">@dimen/margin16dp</item>
+        <item name="android:paddingRight">@dimen/margin16dp</item>
+    </style>
+    <style name="HLefterLayout" parent="HLayout48dp">
+        <item name="android:gravity">center_vertical|left</item>
+    </style>
+    <style name="HCenterLayout" parent="HLayout48dp">
+        <item name="android:gravity">center</item>
+    </style>
+    <style name="HWeightLefterLayout" parent="HLefterLayout">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_weight">10</item>
+    </style>
+    <style name="HWeightCenterLayout" parent="HCenterLayout">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_weight">10</item>
+    </style>
+
+    <style name="HWeightLefterLayoutPadding" parent="HWeightLefterLayout">
+        <item name="android:paddingLeft">@dimen/margin8dp</item>
+        <item name="android:paddingRight">@dimen/margin8dp</item>
+    </style>
+    <style name="HWeightCenterLayoutPadding" parent="HWeightCenterLayout">
+        <item name="android:paddingLeft">@dimen/margin8dp</item>
+        <item name="android:paddingRight">@dimen/margin8dp</item>
+    </style>
+    <style name="Icon24Layout" parent="HLayout48dp">
+        <item name="android:layout_width">24dp</item>
+    </style>
+    <style name="Icon32Layout" parent="HLayout48dp">
+        <item name="android:layout_width">32dp</item>
+    </style>
+    <style name="Icon48Layout" parent="HLayout48dp">
+        <item name="android:layout_width">48dp</item>
+    </style>
+
+    <style name="HLeftText" parent="HWeightLefterLayoutPadding">
+
+    </style>
+    <style name="HCenterText" parent="HWeightCenterLayoutPadding">
+
+    </style>
+    <style name="HLeftText16Sp" parent="HLeftText">
+        <item name="android:textSize">16sp</item>
+    </style>
+    <style name="HCenterText16Sp" parent="HCenterText">
+        <item name="android:textSize">16sp</item>
+    </style>
+    <style name="HLeftText14Sp" parent="HLeftText">
+        <item name="android:textSize">14sp</item>
+    </style>
+    <style name="HCenterText14Sp" parent="HCenterText">
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <style name="MenuStype" parent="HCenterLayout">
+        <item name="android:layout_marginBottom">@dimen/dp1</item>
+        <item name="android:layout_height">@dimen/height48dp</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:background">@drawable/menu_item</item>
+        <item name="android:clickable">true</item>
+    </style>
+
+    <style name="InputPassword" parent="@style/Widget.AppCompat.EditText">
+        <item name="android:inputType">numberPassword</item>
+        <item name="android:maxLength">8</item>
+    </style>
+</resources>

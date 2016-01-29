@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="CHLayout" parent="">
+        <item name="android:gravity">center</item>
+        <item name="android:orientation">horizontal</item>
+    </style>
+
+    <style name="CHNoneV48dp" parent="CHLayout">
+        <item name="android:layout_height">@dimen/dp48</item>
+    </style>
+    <style name="CHNoneV48dpPadding" parent="CHNoneV48dp">
+        <item name="android:paddingLeft">@dimen/padding</item>
+        <item name="android:paddingRight">@dimen/padding</item>
+    </style>
+
+    <style name="CHFillV48dp" parent="CHNoneV48dp">
+        <item name="android:layout_width">match_parent</item>
+    </style>
+    <style name="CHFillV48dpPadding" parent="CHNoneV48dpPadding">
+        <item name="android:layout_width">match_parent</item>
+    </style>
+    <style name="CH5V48dp" parent="CHNoneV48dp">
+        <item name="android:layout_width">@dimen/dp0</item>
+        <item name="android:layout_weight">3</item>
+    </style>
+    <style name="CH5V48dpPadding" parent="CHNoneV48dpPadding">
+        <item name="android:layout_width">@dimen/dp0</item>
+        <item name="android:layout_weight">3</item>
+    </style>
+    <style name="Icon24" parent="CHNoneV48dpPadding">
+        <item name="android:layout_width">@dimen/dp40</item>
+    </style>
+    <style name="Icon32" parent="CHNoneV48dpPadding">
+        <item name="android:layout_width">@dimen/dp48</item>
+    </style>
+    <style name="HFillVWrap" parent="">
+        <item name="android:orientation">vertical</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+    <style name="HFillVWrapPadding" parent="HFillVWrap">
+        <item name="android:paddingLeft">@dimen/padding</item>
+        <item name="android:paddingRight">@dimen/padding</item>
+    </style>
+    <style name="HFillVWrapMargin" parent="HFillVWrap">
+        <item name="android:layout_marginTop">@dimen/dp4</item>
+        <item name="android:layout_marginBottom">@dimen/dp4</item>
+    </style>
+    <style name="VFillContent" parent="">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_weight">1</item>
+    </style>
+
+</resources>

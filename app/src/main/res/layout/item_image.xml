@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/HVFill"
+    >
+    <ImageView
+        android:src="@drawable/device"
+        android:layout_width="90dp"
+        android:layout_height="90dp"
+        />
+    <TextView
+        android:id="@+id/user_name"
+        android:text="@string/stub"
+        android:textColor="@color/black"
+        style="@style/HWeightLefterLayoutPadding"
+        />
+</LinearLayout>

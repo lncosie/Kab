@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:title="a"
+        android:id="@+id/caonima">
+    </item>
+    <item android:title="b"
+        android:id="@+id/fuckyou">
+    </item>
+</menu>

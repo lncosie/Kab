@@ -1,0 +1,135 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+
+
+    <style name="H_Frame" parent="">
+        <item name="android:orientation">horizontal</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:gravity">center</item>
+
+        <item name="android:background">@null</item>
+    </style>
+    <style name="V_Frame" parent="">
+        <item name="android:orientation">vertical</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:gravity">center</item>
+        <item name="android:background">@null</item>
+    </style>
+    <style name="H_FrameFull" parent="H_Frame">
+        <item name="android:layout_width">match_parent</item>
+    </style>
+
+
+    <style name="V_FrameFull" parent="V_Frame">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:orientation">vertical</item>
+    </style>
+
+    <style name="H_LayoutV48dp" parent="H_FrameFull">
+        <item name="android:layout_height">@dimen/dp48</item>
+    </style>
+    <style name="V_LayoutV48dp" parent="V_FrameFull">
+        <item name="android:layout_height">@dimen/dp48</item>
+    </style>
+    <style name="H_LayoutV56dp" parent="H_FrameFull">
+        <item name="android:layout_height">@dimen/dp56</item>
+    </style>
+    <style name="H_LayoutV48dpMargin" parent="H_LayoutV48dp">
+        <item name="android:paddingLeft">@dimen/margin</item>
+        <item name="android:paddingRight">@dimen/margin</item>
+    </style>
+
+    <style name="H_LayoutWeightChild" parent="">
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_weight">2</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:gravity">center</item>
+
+        <item name="android:textColor">@color/white</item>
+        <item name="android:background">@null</item>
+    </style>
+    <style name="H_LayoutChild" parent="">
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:gravity">center</item>
+    </style>
+    <style name="H_LayoutChild24dp" parent="H_LayoutChild">
+        <item name="android:layout_width">24dp</item>
+    </style>
+    <style name="H_LayoutChild32dp" parent="H_LayoutChild">
+        <item name="android:layout_width">32dp</item>
+    </style>
+    <style name="V_LayoutWeightChild" parent="">
+        <item name="android:layout_height">0dp</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:gravity">center</item>
+        <item name="android:background">@null</item>
+    </style>
+
+
+    <style name="PageIndecator" parent="H_LayoutWeightChild">
+        <item name="android:background">@drawable/page_indicator</item>
+        <item name="android:button">@null</item>
+        <item name="android:paddingTop">@dimen/dp2</item>
+    </style>
+    <style name="HistoryIndecator" parent="H_LayoutWeightChild">
+        <item name="android:button">@null</item>
+    </style>
+    <style name="SettingFrame" parent="H_LayoutV48dpMargin">
+        <item name="android:background">@drawable/setting_item</item>
+        <item name="android:clickable">true</item>
+    </style>
+
+
+    <style name="LeftCenterWeigh2Text" parent="H_LayoutWeightChild">
+        <item name="android:paddingLeft">@dimen/dp16</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">@dimen/sp16</item>
+        <item name="android:gravity">center_vertical|left</item>
+        <item name="android:layout_gravity">center</item>
+    </style>
+    <style name="LeftCenterText" parent="H_LayoutV48dpMargin">
+        <item name="android:paddingLeft">@dimen/dp8</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">@dimen/sp16</item>
+        <item name="android:gravity">center_vertical|left</item>
+        <item name="android:layout_gravity">center</item>
+    </style>
+    <style name="CenterText" parent="H_LayoutWeightChild">
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">@dimen/sp16</item>
+        <item name="android:gravity">center</item>
+        <item name="android:layout_gravity">center</item>
+    </style>
+    <style name="MasterText" parent="@style/Base.TextAppearance.AppCompat.Small">
+        <item name="android:layout_gravity">left|center_vertical</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">@dimen/sp14</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:paddingLeft">@dimen/dp8</item>
+        <item name="android:paddingRight">@dimen/dp8</item>
+    </style>
+    <style name="DetailText" parent="@style/Base.TextAppearance.AppCompat.Small">
+        <item name="android:layout_gravity">bottom</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">@dimen/sp12</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:paddingLeft">@dimen/dp8</item>
+        <item name="android:paddingRight">@dimen/dp8</item>
+    </style>
+
+
+</resources>

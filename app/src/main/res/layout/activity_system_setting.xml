@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/b"
+    android:orientation="vertical">
+
+    <include layout="@layout/title_bar" />
+
+    <include layout="@layout/v_fragment" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/setting_system"
+                style="@style/SettingFrame">
+
+                <ImageView
+                    style="@style/H_LayoutChild24dp"
+                    android:src="@android:drawable/ic_lock_idle_alarm" />
+
+                <TextView
+                    style="@style/LeftCenterWeigh2Text"
+                    android:text="@string/system_sync_time" />
+
+                <ImageView
+                    style="@style/Icon24Layout"
+                    android:src="@drawable/forward" />
+            </LinearLayout>
+
+            <include layout="@layout/v_header"></include>
+
+            <LinearLayout
+                android:id="@+id/setting_door_message"
+                style="@style/SettingFrame">
+
+                <ImageView
+                    style="@style/H_LayoutChild24dp"
+                    android:src="@android:drawable/ic_lock_idle_alarm" />
+
+                <TextView
+                    style="@style/LeftCenterWeigh2Text"
+                    android:text="@string/system_volumn" />
+
+                <ImageView
+                    style="@style/Icon24Layout"
+                    android:src="@drawable/forward" />
+            </LinearLayout>
+
+            <include layout="@layout/v_header"></include>
+
+            <LinearLayout
+                android:id="@+id/setting_door_alarm"
+                style="@style/SettingFrame">
+
+                <ImageView
+                    style="@style/H_LayoutChild24dp"
+                    android:src="@android:drawable/ic_lock_idle_alarm" />
+
+                <TextView
+                    style="@style/LeftCenterWeigh2Text"
+                    android:text="@string/system_free_space" />
+
+                <ImageView
+                    style="@style/Icon24Layout"
+                    android:src="@drawable/forward" />
+            </LinearLayout>
+
+            <include layout="@layout/v_header"></include>
+
+            <LinearLayout style="@style/SettingFrame">
+
+                <ImageView
+                    style="@style/H_LayoutChild24dp"
+                    android:src="@android:drawable/ic_lock_idle_alarm" />
+
+                <TextView
+                    style="@style/LeftCenterWeigh2Text"
+                    android:text="@string/system_buttery" />
+
+                <ImageView
+                    style="@style/Icon24Layout"
+                    android:src="@drawable/forward" />
+            </LinearLayout>
+
+            <include layout="@layout/v_fragment" />
+
+            <LinearLayout style="@style/SettingFrame">
+
+                <ImageView
+                    style="@style/H_LayoutChild24dp"
+                    android:src="@android:drawable/ic_lock_idle_alarm" />
+
+                <TextView
+                    style="@style/LeftCenterWeigh2Text"
+                    android:text="@string/system_safe" />
+
+                <ImageView
+                    style="@style/Icon24Layout"
+                    android:src="@drawable/forward" />
+            </LinearLayout>
+
+            <include layout="@layout/v_header"></include>
+
+            <LinearLayout style="@style/SettingFrame">
+
+                <ImageView
+                    style="@style/H_LayoutChild24dp"
+                    android:src="@android:drawable/ic_lock_idle_alarm" />
+
+                <TextView
+                    style="@style/LeftCenterWeigh2Text"
+                    android:text="@string/system_reset_password" />
+
+                <ImageView
+                    style="@style/Icon24Layout"
+                    android:src="@drawable/forward" />
+            </LinearLayout>
+
+            <include layout="@layout/v_header"></include>
+
+            <LinearLayout style="@style/SettingFrame">
+
+                <ImageView
+                    style="@style/H_LayoutChild24dp"
+                    android:src="@android:drawable/ic_lock_idle_alarm" />
+
+                <TextView
+                    style="@style/LeftCenterWeigh2Text"
+                    android:text="@string/system_reset" />
+
+                <ImageView
+                    style="@style/Icon24Layout"
+                    android:src="@drawable/forward" />
+            </LinearLayout>
+
+
+            <include layout="@layout/v_fragment" />
+
+            <LinearLayout style="@style/SettingFrame">
+
+                <ImageView
+                    style="@style/H_LayoutChild24dp"
+                    android:src="@android:drawable/ic_lock_idle_alarm" />
+
+                <TextView
+                    style="@style/LeftCenterWeigh2Text"
+                    android:text="@string/system_firewall" />
+
+                <ImageView
+                    style="@style/Icon24Layout"
+                    android:src="@drawable/forward" />
+            </LinearLayout>
+
+            <include layout="@layout/v_header"></include>
+
+            <LinearLayout style="@style/SettingFrame">
+
+                <ImageView
+                    style="@style/H_LayoutChild24dp"
+                    android:src="@android:drawable/ic_lock_idle_alarm" />
+
+                <TextView
+                    style="@style/LeftCenterWeigh2Text"
+                    android:text="@string/system_version" />
+
+                <ImageView
+                    style="@style/Icon24Layout"
+                    android:src="@drawable/forward" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="RHLayout" parent="">
+        <item name="android:gravity">center_vertical|right</item>
+        <item name="android:orientation">horizontal</item>
+    </style>
+    <style name="RHNoneV48dp" parent="RHLayout">
+        <item name="android:layout_height">@dimen/dp48</item>
+    </style>
+    <style name="RHNoneV48dpPadding" parent="RHNoneV48dp">
+        <item name="android:paddingLeft">@dimen/padding</item>
+        <item name="android:paddingRight">@dimen/padding</item>
+    </style>
+    <style name="RHFillV48dp" parent="RHNoneV48dp">
+        <item name="android:layout_width">match_parent</item>
+    </style>
+    <style name="RHFillV48dpPadding" parent="RHNoneV48dpPadding">
+        <item name="android:layout_width">match_parent</item>
+    </style>
+    <style name="RH5V48dp" parent="RHNoneV48dp">
+        <item name="android:layout_width">@dimen/dp0</item>
+        <item name="android:layout_weight">5</item>
+    </style>
+    <style name="RH5V48dpPadding" parent="RHNoneV48dpPadding">
+        <item name="android:layout_width">@dimen/dp0</item>
+        <item name="android:layout_weight">5</item>
+    </style>
+</resources>
