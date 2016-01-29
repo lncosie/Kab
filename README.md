@@ -4,7 +4,22 @@ android quik develop library,include a sample project
 ###init when app startup
     Kab.init(this, "db", 1)    
 ####will init kab library,database will named as "db",vision=1
-
+####Bind in activity
+    override void onCreate(Bundle savedState) {
+            super.onCreate(savedInstanceState)
+            Kab.bind(this, this)
+        }
+####or in fragment        
+    override void onCreateView(...) {
+                View root = super.onCreateView(inflater, container, savedInstanceState)
+                Kab.bind(this, root)
+            } 
+####Don't forget UnBind when finalize
+    override void onDestroy() {
+            super.onDestroy()
+            Kab.unbind(this)
+        }
+             
 ##SqliteORM table and view support
 ###create table and view
     @ViewName("Top5",selectAs="select * from device limited 5")
@@ -34,16 +49,6 @@ android quik develop library,include a sample project
     List<Device> ds=Device.where("name=?","dv"); 
 ---
 ##Android view inject
-###Bind when view create in activity
-    override void onCreate(Bundle savedState) {
-            super.onCreate(savedInstanceState)
-            Kab.bind(this, this)
-        }
-####or in fragment        
-    override void onCreateView(...) {
-                View root = super.onCreateView(inflater, container, savedInstanceState)
-                Kab.bind(this, root)
-            }    
 ###Bind views
     @Bind(R.id.XXX)
     ListView xxx;
