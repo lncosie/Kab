@@ -113,9 +113,11 @@ android quik develop library,include a sample project
               user_name.text = data.name
           }
       }
-####and use it like this   
+####define a dataview in class
    @Dataview("select * from device")
    DataView<Device> devices;
-   
+####and use it like this
+   devices.update()
    ListAdapter adapter = new ListViewAdapter(this, devices, Holder::class.java);
    list.adapter = adapter
+   
