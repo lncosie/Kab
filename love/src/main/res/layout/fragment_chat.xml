@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    style="@style/HVFill">
+    <ListView
+        android:id="@+id/list_chats"
+        style="@style/VFillContent"/>
+    <LinearLayout
+        style="@style/LHFillV48dpPadding">
+        <EditText
+            android:id="@+id/text_send"
+            style="@style/LH5V48dpPadding"
+            />
+        <ImageView
+            android:id="@+id/send"
+            android:src="@drawable/circled_user_male"
+            style="@style/Icon32" />
+    </LinearLayout>
+</LinearLayout>

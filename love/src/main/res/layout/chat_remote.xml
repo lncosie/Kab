@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    style="@style/HLayoutFillPadding"
+    >
+    <ImageView
+        android:id="@+id/user_image"
+        style="@style/Icon32"
+        android:src="@drawable/circled_user_male_2"
+        />
+    <TextView
+        android:id="@+id/user_name"
+        android:text="@string/stub"
+        android:textColor="@color/white"
+        style="@style/LH5V48dp"
+        />
+</LinearLayout>
