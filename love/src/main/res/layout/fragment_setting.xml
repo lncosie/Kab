@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    style="@style/HVFill">
+
+    <LinearLayout
+        style="@style/LHFillV48dpPadding">
+        <TextView
+            android:id="@+id/switch_user"
+            android:text="Switch User"
+            android:src="@drawable/circled_user_male"
+            style="@style/CH5V48dp" />
+    </LinearLayout>
+</LinearLayout>

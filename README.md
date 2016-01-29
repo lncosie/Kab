@@ -1,23 +1,34 @@
 # kab library
 android quik develop library,include a sample project
+##Use it in project
+######download kar.aar<https://github.com/lncosie/Kab/blob/master/kab.aar> to project libs dir
+######add in build.gradle
+    dependencies {
+        compile(name:'kab', ext:'aar')
+    }
+    repositories{
+        flatDir{
+            dirs 'libs'
+        }
+    }
 ##How to use it
 ###init when app startup
-    Kab.init(this, "db", 1)    
+    Kab.Companion.init(this, "db", 1)    
 ######will init kab library,database will named as "db",vision=1
 ######Bind in activity
     override void onCreate(Bundle savedState) {
             super.onCreate(savedInstanceState)
-            Kab.bind(this, this)
+            Kab.Companion.bind(this, this)
         }
 ######or in fragment        
     override void onCreateView(...) {
                 View root = super.onCreateView(inflater, container, savedInstanceState)
-                Kab.bind(this, root)
+                Kab.Companion.bind(this, root)
             } 
 ######Don't forget UnBind when finalize
     override void onDestroy() {
             super.onDestroy()
-            Kab.unbind(this)
+            Kab.Companion.unbind(this)
         }
              
 ##SqliteORM table and view support
@@ -42,11 +53,11 @@ android quik develop library,include a sample project
 ######get the id unique in table
 ###Load data from database
 ######get data by id
-    Device d=Device.load(1)
+    Device d=View.Companion.load(1)
 ######get data all the table or view
-    List<Device> ds=Device.all();
+    List<Device> ds=View.Companion.all();
 ######get data by where clause    
-    List<Device> ds=Device.where("name=?","dv"); 
+    List<Device> ds=View.Companion.where("name=?","dv"); 
 ---
 ##Android view inject
 ###Bind views
@@ -71,7 +82,7 @@ android quik develop library,include a sample project
     @OnMessage()
     public void Rcv(BusMessage msg){}
 ######then,just broadcast the message by 
-    Kab.bus.post(new BusMessage())
+    Kab.Companion.getBus().post(new BusMessage())
 ######just so simple,^-^
 ---
 ##A simple inject library
