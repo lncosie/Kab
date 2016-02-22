@@ -4,7 +4,7 @@
 ####Use it in project
   download[kab.aar]<https://github.com/lncosie/Kab/raw/master/kab.aar> to project libs dir
   add followed lines in build.gradle
-  
+    
     dependencies {
         compile(name:'kab', ext:'aar')
     }
