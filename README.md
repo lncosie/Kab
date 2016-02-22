@@ -3,8 +3,8 @@
 
 ####Use it in project
   download[kab.aar]<https://github.com/lncosie/Kab/raw/master/kab.aar> to project libs dir
-  add lines in build.gradle
-
+  add followed lines in build.gradle
+  
     dependencies {
         compile(name:'kab', ext:'aar')
     }
@@ -13,7 +13,7 @@
             dirs 'libs'
         }
     }
-    
+  
 ##How to use it
 ###init when app startup
     Kab.Companion.init(this, "db", 1)    
@@ -153,18 +153,20 @@ litte diffrence between flux concept
 | `Store` | Store |
 
 ###Zoned annotation auto wire when kab bind
->@Zoned("AppZone")
- class App : Application,Store {
-    override onAction(zone: Zone, action: Action) {
-        throw UnsupportedOperationException()
-    }
-    override onCreate() {
-         Kab.bind(this,this)
-   }
- }
+
+    @Zoned("AppZone")
+     class App : Application,Store {
+        override onAction(zone: Zone, action: Action) {
+            throw UnsupportedOperationException()
+        }
+        override onCreate() {
+             Kab.bind(this,this)
+       }
+     }
   
 this means "App" is also a store class,action will be received when any action post to zone named "AppZone",if there isn't a zone created before,a mew zone will instnace
 if you want post action to a zone called "net",you can call
->Zone.getZone("net")?.post(YourAction...)
+    
+    Zone.getZone("net")?.post(YourAction...)
 
 
