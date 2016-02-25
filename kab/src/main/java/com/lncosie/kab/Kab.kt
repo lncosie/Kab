@@ -5,12 +5,14 @@ import com.lncosie.kab.injector.Injector
 import com.lncosie.kab.injector.Module
 import com.lncosie.kab.rx.RxBus
 import com.lncosie.kab.sql.SqliteDriver
+import com.lncosie.kab.thread.ThreadExecutor
 
 public open class Kab {
     companion object {
        public fun init(context: Context, name: String, version: Int) {
             sqlite = SqliteDriver(context, name, version);
             Module.scanForModel(context)
+            ThreadExecutor.threadPoolInit()
         }
         public fun bind(self: Any, context: Any) {
             Injector.bind(self, context)

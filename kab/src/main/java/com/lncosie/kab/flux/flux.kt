@@ -1,7 +1,11 @@
 package com.lncosie.kab.flux
 
+import com.lncosie.kab.Kab
+import com.lncosie.kab.ThreadMode
+import com.lncosie.kab.thread.ThreadExecutor
 import java.lang.ref.WeakReference
 import java.util.*
+import java.util.concurrent.Executor
 
 /**
  * flux  framework component
@@ -17,7 +21,11 @@ class Zone(val name: String) {
     }
 
     fun post(action: Action) {
-        stores.forEach { it.onAction(this, action) }
+        stores.forEach {
+            ThreadExecutor.runThreadMode(
+                    {it.onAction(this,action)},
+                    action.threadMode)
+        }
     }
 
     init {
@@ -40,20 +48,20 @@ class Zone(val name: String) {
     }
 }
 
-class Action {
-    var model: Model? = null
+class Action(val threadMode: ThreadMode) {
 }
 
 abstract class Store(val zoneName: String) {
-    abstract fun onAction(zone: Zone, action: Action)
-    fun post(action: Action) {
-        Zone.getZone(zoneName)?.post(action)
+    fun join(){
+        Zone.getZone(zoneName)?.register(this)
     }
+    fun leave(){
+        Zone.getZone(zoneName)?.unRegister(this)
+    }
+    abstract fun onAction(zone: Zone, action: Action)
 }
 
-interface Model {
 
-}
 
 fun craft() {
     val ui = Zone("ui")
@@ -62,7 +70,7 @@ fun craft() {
 
     val store = object : Store("ui") {
         override fun onAction(zone: Zone, action: Action) {
-            Zone.getZone("net")?.post(Action())
+            Zone.getZone("net")?.post(Action(ThreadMode.WORKER))
         }
     }
     val ns = object : Store("net") {
@@ -71,14 +79,14 @@ fun craft() {
         }
     }
 
-    ui.register(store)
-    net.register(ns)
+    store.join()
+    ns.join()
 
-    val action = Action()
+    val action = Action(ThreadMode.UI)
     ui.post(action)
 
-    net.unRegister(ns)
-    ui.register(store)
+    ns.leave()
+    store.leave()
 
     ui.release()
     net.release()
