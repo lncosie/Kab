@@ -13,23 +13,23 @@ annotation class Binding(val value: KClass<*>)
 
 @Retention(RUNTIME)
 @Target(CLASS)
-public annotation class TableName(val value: String)
+annotation class TableName(val value: String)
 
 @Retention(RUNTIME)
 @Target(CLASS)
-public annotation class ViewName(val value: String, val viewAsSelect: String)
+annotation class ViewName(val value: String, val viewAsSelect: String)
 
 @Retention(RUNTIME)
 @Target(FIELD)
-public annotation class Column()
+annotation class Column()
 
 @Retention(RUNTIME)
 @Target(FIELD)
-public annotation class NotNull()
+annotation class NotNull()
 
 @Retention(RUNTIME)
 @Target(FIELD)
-public annotation class Unique()
+annotation class Unique()
 
 @Retention(RUNTIME)
 @Target(FIELD)
@@ -95,7 +95,7 @@ annotation class Bind(val value: Int)
 @Retention(RUNTIME)
 @Target(FUNCTION)
 @Binding(ClickBinder::class)
-public annotation class OnClick(vararg val value: Int)
+annotation class OnClick(vararg val value: Int)
 
 /***
  * must annotation on
@@ -104,7 +104,7 @@ public annotation class OnClick(vararg val value: Int)
 @Retention(RUNTIME)
 @Target(FUNCTION)
 @Binding(LongClickBinder::class)
-public annotation class OnLongClick(vararg val value: Int)
+annotation class OnLongClick(vararg val value: Int)
 
 /***
  * must annotation on
@@ -113,7 +113,7 @@ public annotation class OnLongClick(vararg val value: Int)
 @Retention(RUNTIME)
 @Target(FUNCTION)
 @Binding(ItemClickBinder::class)
-public annotation class OnItemClick(vararg val value: Int)
+annotation class OnItemClick(vararg val value: Int)
 
 
 /***
@@ -123,7 +123,7 @@ public annotation class OnItemClick(vararg val value: Int)
 @Retention(RUNTIME)
 @Target(FIELD)
 @Binding(TextBinder::class)
-public annotation class BindText(val value: Int)
+annotation class BindText(val value: Int)
 
 
 /***
@@ -133,4 +133,11 @@ public annotation class BindText(val value: Int)
 @Retention(RUNTIME)
 @Target(FIELD)
 @Binding(EditBinder::class)
-public annotation class BindEdit(val value: Int)
+annotation class BindEdit(val value: Int)
+
+/***
+ * auto wire store(in Kab.bind,cast throw exception when not inherit form Store) to named zone and exit zone scope when Kab.unbind
+ */
+@Retention(RUNTIME)
+@Target(CLASS)
+annotation class ZonedStore(val zoneName:String)

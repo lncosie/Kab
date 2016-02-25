@@ -51,16 +51,20 @@ class Zone(val name: String) {
 class Action(val threadMode: ThreadMode) {
 }
 
-abstract class Store(val zoneName: String) {
+interface Store {
+    abstract fun onAction(zone: Zone, action: Action)
+}
+open class ZoneStore(val zoneName:String):Store{
     fun join(){
         Zone.getZone(zoneName)?.register(this)
     }
     fun leave(){
         Zone.getZone(zoneName)?.unRegister(this)
     }
-    abstract fun onAction(zone: Zone, action: Action)
+    override fun onAction(zone: Zone, action: Action) {
+        throw UnsupportedOperationException()
+    }
 }
-
 
 
 fun craft() {
@@ -68,12 +72,12 @@ fun craft() {
     val net = Zone("net")
 
 
-    val store = object : Store("ui") {
+    val store = object : ZoneStore("ui") {
         override fun onAction(zone: Zone, action: Action) {
             Zone.getZone("net")?.post(Action(ThreadMode.WORKER))
         }
     }
-    val ns = object : Store("net") {
+    val ns = object : ZoneStore("net") {
         override fun onAction(zone: Zone, action: Action) {
 
         }
