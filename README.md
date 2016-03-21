@@ -1,14 +1,13 @@
 #KAB(kotlin android boost) library
-    android develop library,include a sample project
 ###简单介绍
     这个库最大的特点就是能最大程度的支持快速开发,一开始我只是对使用现有的ORM的不满,所以有了我的第一个
     自己写的ORM(名字叫AnkORM,已被移除),支持视图和数据库修改回调,现有的ORM只支持简单的对象关系映射,稍微
-    复杂一点的逻辑或者范式都还是要写一堆的SQL语句和转换代码.支持视图后能简化很多代码,也能更好支持代
-    重构;而数据库修改回调能简化很多的页面同步操作.后来我又把使用最多的简单提取和显示数据的部分加入,暂且
+    复杂一点的逻辑或者范式都还是要写一堆的SQL语句和转换代码.支持视图后能简化很多代码,也能更好支持代码
+    重构;加入数据库修改回调能简化很多的页面同步操作.后来我又把使用最多的简单的数据显示部分加入,暂且
     叫DataView,一下子代码就清爽了很多.
     再到后来我干脆把常用的能简化开发的代码都引入,包括UI界面快速Linear Layout,控件/事件绑定,Reactive 
-    Program,Message Bus,Inject,ListView优化等.能快速开发一个App的原型并在此基础上就行迭代和重构,能打幅度节约
-    开发时间,故称之为Kotlin Android Boost Library
+    Program,Message Bus,Inject,ListView优化等.能快速开发一个App的原型并在此基础上就行迭代和重构,能大幅度
+    节约开发时间,故称之为Kotlin Android Boost Library
     这里包括一个示例代码(app),只是测试和展示如何使用这个库
 ###特点
     第一个支持视图的ORM
