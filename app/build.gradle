@@ -40,7 +40,7 @@ dependencies {
     compile project(':kab')
 }
 buildscript {
-    ext.kotlin_version = '1.0.0-beta-3595'
+    ext.kotlin_version = '1.0.0'
 
 
     repositories {

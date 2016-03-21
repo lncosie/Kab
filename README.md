@@ -22,6 +22,13 @@
 ######download kab.aar [https://github.com/lncosie/Kab/raw/master/kab.aar]
 ######to project libs dir
 ######add in build.gradle
+#kab library
+###android quik develop library,include a sample project
+
+####Use it in project
+  download[kab.aar]<https://github.com/lncosie/Kab/raw/master/kab.aar> to project libs dir
+  add followed lines in build.gradle
+    
     dependencies {
         compile(name:'kab', ext:'aar')
     }
@@ -102,6 +109,13 @@
     public void Rcv(BusMessage msg){}
 ######then,just broadcast the message by 
     Kab.Companion.getBus().post(new BusMessage())
+#####Thread model issue
+    @OnMessage(ThreadMode) annotation can indicate which thread model will be running
+    enum class ThreadMode{
+        UI,//work on android main ui thread
+        WORKER,//a new work thread in thread pool
+        ANY//rin in a thread not determined 
+    }
 ######just so simple,^-^
 ---
 ##A simple inject library
@@ -150,3 +164,32 @@
     devices.update();
     ListAdapter adapter = new ListViewAdapter(this, devices, Holder::class.java);
     list.adapter = adapter;
+---
+##Flux framework bases
+Flux framework have some <kbd>notable</kbd> characteristic compare with ohter framework such as MVC,MVVM and MVP,this libray have a
+litte diffrence between flux concept
+        
+| Flux  conception                      | Class              |
+| :---------------------------- | ------------------:|
+| `Dispatcher`            | Zone |
+| `Action`            | Action |
+| `Store` | Store |
+
+###Zoned annotation auto wire when kab bind
+
+    @Zoned("AppZone")
+     class App : Application,Store {
+        override onAction(zone: Zone, action: Action) {
+            throw UnsupportedOperationException()
+        }
+        override onCreate() {
+             Kab.bind(this,this)
+       }
+     }
+  
+this means "App" is also a store class,action will be received when any action post to zone named "AppZone",if there isn't a zone created before,a mew zone will instnace
+if you want post action to a zone called "net",you can call
+    
+    Zone.getZone("net")?.post(YourAction...)
+
+

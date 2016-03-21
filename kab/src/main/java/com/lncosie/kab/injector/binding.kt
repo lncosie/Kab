@@ -39,8 +39,8 @@ class TextBinder : IBinder {
             val setter=control.javaClass.getMethod("setText",CharSequence::class.java)
             setter.invoke(control,value);
         }
-        val binding = (target as Field).type.newInstance() as AbstractBinder<*>;
-        binding.context = BinderContext(control, get, set)
+        val binding = (target as Field).type.newInstance() as AbstractBinder<String>;
+        binding.context = BinderContext<String>(control, get, set)
         return binding;
     }
 }
@@ -57,7 +57,7 @@ class EditBinder : IBinder {
             val setter=control.javaClass.getMethod("setText",CharSequence::class.java)
             setter.invoke(control,value);
         }
-        val binding = (target as Field).type.newInstance() as AbstractBinder<*>;
+        val binding = (target as Field).type.newInstance() as AbstractBinder<String>;
         binding.context = BinderContext(control, get, set)
         return binding;
     }
@@ -94,10 +94,10 @@ class ItemClickBinder : IBinder {
             }
 
         }
+
         for(id in ints) {
             val control = findById.invoke(context, id)
             val set = control.javaClass.getMethod("setOnItemClickListener", AdapterView.OnItemClickListener::class.java)
-
             set.invoke(control, click)
         }
         return self;
