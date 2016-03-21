@@ -1,5 +1,4 @@
 #KAB(kotlin android boost) library
-    android develop library,include a sample project
 ###简单介绍
     这个库最大的特点就是能最大程度的支持快速开发,一开始我只是对使用现有的ORM的不满,所以有了我的第一个
     自己写的ORM(名字叫AnkORM,已被移除),支持视图和数据库修改回调,现有的ORM只支持简单的对象关系映射,稍微
