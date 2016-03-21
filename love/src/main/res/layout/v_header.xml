@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<View
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="@dimen/dp16"
-    android:layout_height="@dimen/dp1"
-    android:layout_gravity="left"
-    android:background="@color/setting_item">
-</View>
